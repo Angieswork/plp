@@ -11,5 +11,3 @@ while True:
     print(f'Your result is: {num1 * num2}')
  else:
     print(f'Your result is: {num1 / num2}')
-
-
