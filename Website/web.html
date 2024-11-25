@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1">
+        <title>Animated Portfolio Website</title>
+        <link rel="stylesheet" type="text/css" href="web.css">
+
+        <!--boxicons link--->
+        <link rel="stylesheet"
+        href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+        <!--google fonts link--->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+       
+    </head>
+    <body>
+
+        <!--header section--->
+        <header class="header">
+            <a href="#" class="logo"><span>Angie</span></a>
+
+            <ul class="navbar">
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contacts">Contacts</a>
+                </li>
+            </ul>
+            <div class="menu-btn">
+                <span>TABS</span>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+
+        <!--home section--->
+        <section class="home">
+            <div class="home-text">
+                <span>Mechatronics Engineer</span>
+                <h1>Angela Waithera</h1>
+                <p>I am a circuit and PCB designer, AI and Machine Learning enthusiast, software engineer, 
+                 and product designer.I create reliable solutions by merging hardware and software into functional systems.</p>
+                 <div class="main-btn">
+                    <a href="#" class="btn">Download CV</a>
+                    <a href="#" class="btn two">Contact Me</a>
+                 </div>
+            </div>
+
+            <div class="home-img">
+                <img src="img/web.jpg" alt="Profile photo">
+
+            </div>
+
+        </section>
+
+        <div class="share">
+            <p>Check out my:</p>
+            <div class="social">
+                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAflJREFUWEft18+rTVEUwPHPUwYyQ1EGJjyZKKUkykAmCj0phamkhIGU/IgwJBOlN0VKmWAiyY9CGSj5UZj4A0RJBko5S+fodqz7zr286966d9WZ7L32Xt+z1tpr7T1mwGRswHiMgJoi0s5Dy3EAS/Ea5/G2abPpmM+AVuAxZrUY+ITVeDcdRqfaIwO6gp3JokvY2w+g5wgv1eUR1vUD6GoRmh2J4Uns6QfQSjzBzBbjX8ocetMPoLAZUAfLU/aqPGUvew0T+w9dYVyARUVN+4wP+N7k5cxDG3A0WXgET8vxhYjkr8thPCvLxgmMtyj8wF1cKPLxTjuwDGgXLicLNuNWOb64MPo+0dmICexu8MQ5HMp0ugHaVCT77Qage1jfFJZyfhtu1HW7AdqCmw1AHbL8UovQrvoXoE5CVu0fvS/KRPzwWsxoQzoXoftbuvFQJyGLjSPZo4Z9LK2sKZN4dgIVrSha0l8BdeKhr5iPbzXjpxCnri7Roq71Eug6tieGw7tV/rVO78PFXgKdxbEEKO5S0R/rchxnegkUoTmZGI4b6Itk/A/9bpK69dgvaXN7PN0mV5YhuymMgKoojTxUeWKUQ1VxG+5TFkVsa1LEoudUz+k5RZfen+g8LN5u95PxeUWzjTZRlweIb8rmmqz7f0ND9+ro2rUD56GfHKqHJb+OjGwAAAAASUVORK5CYII="/></a>
+                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAA2dJREFUWEftmFmoTlEUx3/XmPEFmSKU+cWQmSSEDMnsQRIiQyREMstMhjIrJZJIhoQomWeRMmeIFHmRzNP+3/bRubt9hu9+38NN1tt3zl5r/fbaa6+1zpdHEZO8IsbDPwPUGhgGtAOqA1WAYsBb4B1wHdgDXMj0BDKJUElgNDDNOKuf0tFzYD2wGfiaRict0CBgI1AtjVHPGkVOG1HUYiUN0HRgJeQk3+YAS+OIkoAEMiNpVxm+1xFOjdKJA5qdtJsMQcLL5wJLfPpRQIOB/Y5CX5OcVYFJQLOUMI9s7j0ATjnHPtTjw5sXuk0yVCfk9L5RbhL6PQAYBbwCngLPgO/29tUDagN7gX3Ab6t3FVC5COSFXS+9v+KL0BhguxMB7a5HyqhELTsE9HdejgV2JAE9NLtr4CjeBlpkCXQZaOvYkK9GcUBNgXsexzLWPkugY6aC9/bYEJDA8sU9snnm2UJH6ZfdxeMsgWqYvFPelHDs6DYvjwI6Aug2heWM6UndsoQJ1I8CfRxbh8O55UboGtDKUVgFzMwR0AJz6+bH5acLpJDqyoZFBUyFLBeifrbGMfQeqBx1ZC+BWo6COvWEXNDYyq+cCcsnoFwU0C2guaNwEuiZI6ADwEDHlkaUulFAx4FejsI3U/4rAR+zhCpth7cKjp2LQMcoIOXKIo9jlYPFWQJpatD04EqBS+MmtYqfiF35AnQxR3elkFAtgfNAGY++WpJaU764QPqtSh00UjXExkBFe2RTTNPdBahYppHipvmOsB2/vEfhCdAwbM/XXEdap9JXo91tG6AMS1QaTttOv9aMph8cR2UNvKZMTQsqqO6tDS8fbz4StoYf+ID07EaomU60QGftV0agr9FieESYtgHq5HFy1/r4mQSk923MuKGGKrjPZhypacO6DBhi5yVF4VKER81LB2NoNCN1sD4KLIsbYScDG+zqFcCsNElj13QCzsWsVy4GtlMDaaHKvMq9ROVgC/AmBVhnQEfsk9VxHw5JXx0yqN2s81juB6h7+6SrTfzwOx2T5vFNcRtKAyR91aedznQXB6TaciLkWKVEN1ZlJFbSAslIKXNc4+yV1kTQ3ROFwJm++ZXwr21D1YxeYJiPosoEKLChPxXUgG8mbFbV+Q7wIykq4feFAcrEfsZr/wMlhewPsfWUJfen6EsAAAAASUVORK5CYII="/></a>
+            </div>
+        </div>
+
+        <!--Skills section start--->
+        <section id="skills" class="skills">
+            <h2 class="section-title">Skills and Experience</h2>
+            <div class="experience-info">
+                <div class="grid">
+                    <div class="grid-card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAR9JREFUWEftl00KAjEMRt/cQRG8ogtxJyL+IOJCEMQzioqHUAsuSuk0Ma1QZWZrk7x+yXwTGyp7msp4+Augh6dq24U0Z6LNsSikKaY58/tATr05MAIGhYb/BpyAbVu+VMsOwKQQSJhmAyxiuVNAd6D3JaALMPwUyDyYiUuIOVMKicEG9cSc1QP5N/AFsPhVTEAxf1hIDHhXWSnbFZ4T8+cALQWo9ev3bCC/RmoAXaFcoOgYWIe6A3Kt61rmVKh+hkSf8Hwo9y2LGm+OD2m8MduHtAppYIp8OrTGWAKoqDF2QE6Ba8HlPlTUtMLugKm1N0Kcacl3QzcDxkC/ENgZOAJ7y9+gthhxLxa+g8m7WVbTDqjQuNjSWFpmq6SMqg7oCWS9UCXAj45zAAAAAElFTkSuQmCC"/>
+                        <span>Circuit and PCB Designer</span>
+                        <p>I design compact and efficient PCBs tailored for specific applications,
+                         including IoT, wearables, and industrial systems. My expertise covers low-power designs,
+                         and modern communication protocols like BLE, Wi-Fi, and USB.</p>
+                    </div>
+
+                    <div class="grid-card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASNJREFUWEftmE1qAkEQRt+YC0jAlQs9iuQ+EdwJij8IyUYkm1xHEy+iG7MLuYHaBa2EwZmqZAYcpRpm1VXfvP6qi2ImoWIrqRgPNwsk4EPgGWj80dWvkPMOvFjyrA4tgJ5FMCdmBow0DSvQN/CoiSn74lRT07AAScxeEzLuq++7FNAB5JG1BNbAwfjCvDA51EPUTuuf89JAH0AbaMUIqbnUvkygSdAbR/0tsAmHfjoRVR5IQH+XbAV8luSQuFzL0M8s2aU7cPVLnYa6OpB3mXdZvJTeZZbp4rPMMlx9lmW55F3mXWZxwLusiEv322Xiyg9QL2IPUNqHonC8Av2CQNOQL2Mjd6nTN2ZL3ADo/uNnwy64+wbMNRjZtwJZtEqJcSDNxiPux34lXj5WawAAAABJRU5ErkJggg=="/>
+                        <span>Embedded Systems Engineer</span>
+                        <p>I design low-power, high-performance embedded systems for IoT and real-time
+                         applications. My work integrates sensors, actuators, and communication modules,
+                         optimizing power consumption while maintaining functionality.</p>               
+                    </div>
+
+                    <div class="grid-card">
+                        <span>Software Engineer</span>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAs9JREFUWEftlkuoTlEUx3/XO8oEA2UgjzCiTAwVA8ljRgaKQh4pE5GYedykDIQ8ymuCkbxSxNREHkleE1IGyEDkzfnX2lr33L3P2ef6+L7B3aPznbPX2r9vr//+r91Fh42uDuOhH6iuIq3eoTXADOAhcBl4WQdQ/t5qoFvAbFtkAXClnUADgI/AMIMYCXxoJ5BKddcAngJTmsJofitLtg44ZBCngBXtBjoNLDeItcCRfw00CBgCfEospDJNtm/TgQf2PBz4CnzPAcwt2RjgIvAYWBlJPBp4Y+8/AyOAn/b7pOlpkZuTZMsBmglcKkow1rIsBc6XMi40YL2+Ccyx79LRCXt+DWjenaqdqgNaZUId7JLsBbaUku4qyrLN3u0Edtiz5m52c78B64HjKagUkPRyEJDzhvEFWA2ciSSrMkQJ/Rgw1MUdLcq3IaarGFDQyyyX4EXhMYuB+xGYHEOUyNVKxrn420AvXZWBZG5XnV4UfwNYArxPbLMWu2ffngBTE/NGAeecvjRNuprv4nsYo3SiUzTBEv4qtnmP6SGcmNhaTQxRu7m7pMHn9id+KLnfIQE9AiY5oO6iztvdEY4BNTFEAekAbHWJkkCaoyN+DZCvhHEdWAa8S5QiZYjl6SrZWWCu+/AWmOetICZq+Y18R3BhvAJ0nSiLusoQPZByXSiJWn4kX5KO/ozUsVeLkFeE3qSA2LFPGaJfQzmUSznDkHXI49RSeow6Y5RgDwADXdQ+Z3YpQwzT9wObXKyEuxE4nCh/1vVDfqQ+Jn/SUC9Tf9KouyH61qFeJ9+R/yRH3Q6FwKAr3ZXDPSfHEBUv75kY00uMKhdIsdKAWkq4fuQaojq/elgvvfwtUDm+iSFWVamRqKsSNTHE/wL0zLm6vyFmL97KkuUaYmO4JqL2yXMMsTGMAvoKNN48ZZr1oeQNsClVX4GarpM9vx+obqs6bod+AxbwkCWTIXehAAAAAElFTkSuQmCC"/>
+                        <p>I write clean, reusable code for embedded systems, ensuring scalability
+                          and performance. My work includes firmware development and hardware integration
+                          using protocols like SPI, I2C, and USB.</p>           
+                    </div>
+
+                    <div class="grid-card">
+                        <span>Product Developer</span>
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAABCRJREFUWEftmHnI5lMUxz8z9m2MtWQdYxeliEgkyx/KmibZxjL2LcIfskehkCUhO5MoYytGyVq2ZC9LdtmJ7Lv7mc7ldt/ffX7P804xaU49vc9zz733fH9n+Z7zeycwj8mEeQwP/ytAawNXA1sBC4WnfwWeAGYAb43H++P10OrA88AyDaOfAxsDn4wKaryAjgIu7zF2WHhwJEzjBXQmcEZYOiv99bfSWh8aVB+gqcCqwLvxWQo4DjgRmNwD6GvgfOAy4Htgjfh8MCi/BgHyosOBBcPw7cB2KVTLV4+7L3BrrE0Hrq/0nwEPA9Ni/bcAeUKX21qADgSu6/HzO8ClcfnvsddqOxo4Pp1fref8AcBN9Z4uQIbizcITXyXDyxYHvwAOBu5NefRnw6j37g5cVXn0y/QAy8UZ75E6DO3f0gXIUPmUynvA+gHgnHD9kSOU88pRjdsAp6YcugF4rfCeHjYnm4AmAcZ8kdixG3B3wwuLApa2F06JPYbxIuAa4OfGOT13Z+h+Cg+a9HOk9tAWwJOhMy8MzY0dF1t5DwLrNYy+AuyYAH9c6bV3UIRygdBtCjzXArRYlPeKxUX3J1beNbnctqBYdc8kz23SAJOXHwW2LfYsDNwH7FCsCXhNQE91eshFvTQ7ud7wZdmy8Jw5dEWhOy8qTaDHACcXur2TF2+L3+bRI4XOZN6+9E5XyPL+pYG3i+paF3gjlC8BG8V3jV9YeUoGz8z9UBh1ywbAq7HXClsL+Kb28iBiNCl1s2K8/4jvPwImtGJobaSlWFkfxoKUkct88WBsVd8Bsv4YGQSoNGxu5Th72RJx00odFODaR6EvDc8VoDpkVtPrYeTZlJxWhnIKcEH1mKcBZ8eaFWv+KRsCVp8yUsj2iraxZGGoTOpDo2yz+txoIYb32BSWk4pz+wM3x++tUy98rNDpPSngjvKB6pCtkLjHbpyJ0b2W/S6ATVEZtuwfT8xuZeX24p2WvZWVxTSQ0/TYHKkBbQ48FTqJ0SZ7S0fPcmKUGNepwpV/vphoYifg00qvPacDW8jE0MlnL7QA6Xb5wSRWpPm7GkbdcwTgGGFlKVLDxempry2ItD5eto5vo3X80gLketlc34/2YAsxN0xoG++ws7IV56hrEchXAh2puQqob/yQdw4B7ml4LqeC7cYmWw505Sgz9Pjhhft1DU8VADv7JdFG8oAmgVppwwxoTpdjGvcgYnSscAbKjOrIsHNVgWLcJyX3zADb9SA/pP74ALBH7DFHnUady8dI35DvSLpZMK+Dvj3tdGDPAljrrUOmnxUkKak6M5lTTwPZoyMDaqXJf/Ya1ALk28iVA5Ja1b/6orhKCtvLxbtZjc0xWMLLTbYH+z/qvhwadJHzjLxin8vvbhKc/2yQFqzCkWVuAI1sbJgD8wH1eekvHLLVJeGZ91oAAAAASUVORK5CYII="/>
+                        <p>I transform ideas into market-ready products through iterative design,
+                          prototyping, and testing. By combining hardware and software, I deliver user-focused
+                          solutions that meet client needs across industries.</p>           
+                    </div>
+                </div>
+            </div>        
+        </section>
+
+        <section id="projects" class="projects">
+
+            <h2 class="section-title">Recent Projects</h2>
+
+            <div class="projects-grid">
+                <div class="projects-card">
+                    <img src="img/daip.jpg" alt="">
+                    <h3>Development of AI Powered Biodiversity Assessment System</h3>
+                    <p>This is an innovative project designed to monitor wildlife autonomously in diverse environments
+                     like rainforests and savannas. It combines motion sensors, edge processing, and AI algorithms for
+                     real-time wildlife detection, behavior tracking, and pose estimation.</p>
+                     <div class="btn-group">
+                        <div class="btn">Show More</div>
+                     </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="img/swm.jpg" alt="">
+                    <h3>Smart Water Meter</h3>
+                    <p>This project monitor water usage, detect leaks,and enable remote control of water flow.
+                     Featuring components such as flow sensors, motorized valves, an STM32 microcontroller,
+                     GSM module, and LCD display, the system provides real-time consumption data and promotes
+                     efficient water management through automation and bidirectional communication.</p>
+                     <div class="btn-group">
+                        <div class="btn">Show More</div>
+                     </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="img/aap.jpg" alt="">
+                    <h3>Audio Amplifier Project</h3>
+                    <p>Created a PCB that amplifies input audio signals from a microphone, AUX cable
+                        and Bluetooth input and transmits them to wired headphones, while using a small
+                        screen as the user interface</p>
+                     <div class="btn-group">
+                        <div class="btn">Show More</div>
+                     </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="img/btp.jpg" alt="">
+                    <h3>BLE Technology Project</h3>
+                    <p>Created a PCB involving a BLE microcontroller that pairs with nearby devices,
+                     triggering LEDs and haptic motors when in proximity to similar BLE devices. This
+                     project also integrated wireless charging support for the system.</p>
+                     <div class="btn-group">
+                        <div class="btn">Show More</div>
+                     </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="img/hsw.jpg" alt="">
+                    <h3>Hybrid Smartwatch Project</h3>
+                    <p>Developed a hybrid smartwatch PCB that is programmable via NFC from a smartphone
+                      and wirelessly charged using a Qi charger.</p>
+                     <div class="btn-group">
+                        <div class="btn">Show More</div>
+                     </div>
+                </div>
+
+                <div class="projects-card">
+                    <img src="img/up.jpg" alt="">
+                    <h3>USB-C Project</h3>
+                    <p>Developed a PCB that processes USB-C alt mode signals, specifically DisplayPort protocols,
+                     and transmits them through another USB-C port while also featuring a USB-C HID port.</p>
+                     <div class="btn-group">
+                        <div class="btn">Show More</div>
+                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="input-box">
+                <h2 class="section-title">Contact Me</h2>
+
+                <div class="input">
+                    <input type="text" placeholder="example@gmail.com">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAepJREFUWEft1z3ITnEYx/HPg0HKYxAmg8Xg8TIYLBYWmUhiIRNZlAFFkkUSgwwGGRhJeZlMmMSg5G3F6KUMFEW4L/2PTuc55z73Oc5dTzr/6b7/b7/vua7r/K7OhBk2JmYYjx6oLiN9hP6LCC3HfizERTyue6qG60uxCbNxF2/z54s1tBb3MJnbdAbH8LOhcHH7LJzGkdzCJ2zE02yuCPQI60qE72MnPrSEWoRr2FBy/kF+vgj0HXMqRN9hGx42hFqPG1hSce4r5lVF6FeN2A8cxbkRoQ6lNFU95DSOYoTqgLIL7mAXPleAzU8p2jwi+F+OtkCh8xpb8Lwgugq3sWxEmNjWCVBc9A0HcDmJ78UFzG0A0ylQpns1/djTEKSzGmqpW3mss5R1BdYY6GNy6sUtCd6nVhHtqGw0Boo3KSz+eoXbDuMMl9+BcOSpLoFWp9fzME4NcfRMM1z/OM4i/O1Fl0BxWfhLNqIJ30R07rLxZgCwHU9yi2MFCp0FuDLo1FsLRLewG18K82MHyvT24Xz6cxCXKqLWKdCzQYrWDKncKNaok1dD9nQKVKyhNm9/D1QXtVYRejkwvxUlN48zZaG5clqXTRPhHSdLDCycOozxX0ZZhGLuRPK0P3f3X651Ie4j1EeoLgJ1678B0ZFgJW3TFU0AAAAASUVORK5CYII="/>
+                </div>
+                <div class="btn">Submit</div>
+            </div>
+        </section>
+
+        <footer>
+            <ul>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contacts">Contacts</a>
+                </li>
+            </ul>
+
+            <p class="copyright">© All Rights Reserved | Angela Waithera</p>
+        </footer>
+
+        <!--<section class="projects">
+            <div class="projects">
+                <div class="title">
+                    <h2>Projects</h2>
+                </div>
+                <div class="box"> 
+                    <div class="card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAs9JREFUWEftlkuoTlEUx3/XO8oEA2UgjzCiTAwVA8ljRgaKQh4pE5GYedykDIQ8ymuCkbxSxNREHkleE1IGyEDkzfnX2lr33L3P2ef6+L7B3aPznbPX2r9vr//+r91Fh42uDuOhH6iuIq3eoTXADOAhcBl4WQdQ/t5qoFvAbFtkAXClnUADgI/AMIMYCXxoJ5BKddcAngJTmsJofitLtg44ZBCngBXtBjoNLDeItcCRfw00CBgCfEospDJNtm/TgQf2PBz4CnzPAcwt2RjgIvAYWBlJPBp4Y+8/AyOAn/b7pOlpkZuTZMsBmglcKkow1rIsBc6XMi40YL2+Ccyx79LRCXt+DWjenaqdqgNaZUId7JLsBbaUku4qyrLN3u0Edtiz5m52c78B64HjKagUkPRyEJDzhvEFWA2ciSSrMkQJ/Rgw1MUdLcq3IaarGFDQyyyX4EXhMYuB+xGYHEOUyNVKxrn420AvXZWBZG5XnV4UfwNYArxPbLMWu2ffngBTE/NGAeecvjRNuprv4nsYo3SiUzTBEv4qtnmP6SGcmNhaTQxRu7m7pMHn9id+KLnfIQE9AiY5oO6iztvdEY4BNTFEAekAbHWJkkCaoyN+DZCvhHEdWAa8S5QiZYjl6SrZWWCu+/AWmOetICZq+Y18R3BhvAJ0nSiLusoQPZByXSiJWn4kX5KO/ozUsVeLkFeE3qSA2LFPGaJfQzmUSznDkHXI49RSeow6Y5RgDwADXdQ+Z3YpQwzT9wObXKyEuxE4nCh/1vVDfqQ+Jn/SUC9Tf9KouyH61qFeJ9+R/yRH3Q6FwKAr3ZXDPSfHEBUv75kY00uMKhdIsdKAWkq4fuQaojq/elgvvfwtUDm+iSFWVamRqKsSNTHE/wL0zLm6vyFmL97KkuUaYmO4JqL2yXMMsTGMAvoKNN48ZZr1oeQNsClVX4GarpM9vx+obqs6bod+AxbwkCWTIXehAAAAAElFTkSuQmCC"/>
+                        <h5>Smart Water Meter</h5>
+                        <div class="pra">
+                            <p>This project monitor water usage, detect leaks,and enable remote control of water flow.
+                             Featuring components such as flow sensors, motorized valves, an STM32 microcontroller,
+                             GSM module, and LCD display, the system provides real-time consumption data and promotes
+                             efficient water management through automation and bidirectional communication.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAsNJREFUWEfdmEnIjVEYx38fMhQlY8JGYUNIhhSRwsqKjYVCFqaEDyvzxlzGKEMWSrFRCgsZNkIZyhBKCYkoGUJJzl/n1XuP9z3D29e9l2d1u/f/nOd/nvncFppMWpqMD/8NoQHAGWBciYdvALOAl6kRqOqhVmBHwNhqYGe9CG0ENgSMbTK/C5ckVT3UEEJDgCvAQ0Ahugt0A5YDq4Dugat/ALYB+4AvwCijvwsYCkwBnhTp+zykxBybUzoFTAV6J8UA3gCXDIE5Ob3rwIQUQvOBo4mGU+GycdxVKvKQQvEU6JVqIRH/Dhhkwv8pr1dE6ACwOPHwqnDZWuojNMImb4yB78BhYA/wzCroxiuBhUDHmEOAkcC9DOt6aC+wLOKgF8B04FEJdjhw0RDuF3HWEXuB31CX0Dpgc+CQH7b67gRwk0x5X40gtBbYXuahdtblazzlvT/Si7Jx0in3PL+3dvzsBn6WEcq+72wHY8+CGw4DHkTcXJDJwOUCrCpsIPAtpuwzjJK2KDHb528UINbDePN9Aeaz7fp//eTr1F8BecqVrnYUxDhJ2Jo+Y5WSCYnIK0A3dGU0cDuGDTDeVKPGhCvRIVM4VhgPaJfpU2L0ELAoktAJ06PmlmCV1FttHytN6vWmFWiP8YnKfkxEA50IXIsgLptbMpybQxqoGnoheQ5MK1shbPe9APQNHWRmZk0bcQmljA6VrMKnHSfbnbXraFeaB3SIICOId3QIUM/hehBYkife6PVjMKDN8o+U9aF6LGgLgGNuWH2N8aatpkzntOk/M4FOkbmRwdRgz5lxMzund8tZj4MeEqC/eQieNwu+uqrirOmupFVbELEuAWIictZg9EJ5bJd8ff4IaHi/LtL/p55BPgc05F3mIySX683lk5rFKzbvqoYstKJqMM8wfzjcjyVSNjpS9dscX9VDbU6kaT30C3X8eyUDC07GAAAAAElFTkSuQmCC"/>
+                        <h5>Development of AI Powered Biodiversity Assessment System</h5>
+                        <div class="pra">
+                            <p>This is an innovative project designed to monitor wildlife autonomously in diverse environments
+                             like rainforests and savannas. It combines motion sensors, edge processing, and AI algorithms for
+                             real-time wildlife detection, behavior tracking, and pose estimation. </p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASNJREFUWEftmE1qAkEQRt+YC0jAlQs9iuQ+EdwJij8IyUYkm1xHEy+iG7MLuYHaBa2EwZmqZAYcpRpm1VXfvP6qi2ImoWIrqRgPNwsk4EPgGWj80dWvkPMOvFjyrA4tgJ5FMCdmBow0DSvQN/CoiSn74lRT07AAScxeEzLuq++7FNAB5JG1BNbAwfjCvDA51EPUTuuf89JAH0AbaMUIqbnUvkygSdAbR/0tsAmHfjoRVR5IQH+XbAV8luSQuFzL0M8s2aU7cPVLnYa6OpB3mXdZvJTeZZbp4rPMMlx9lmW55F3mXWZxwLusiEv322Xiyg9QL2IPUNqHonC8Av2CQNOQL2Mjd6nTN2ZL3ADo/uNnwy64+wbMNRjZtwJZtEqJcSDNxiPux34lXj5WawAAAABJRU5ErkJggg=="/>
+                        <h5>Audio Amplifier Project</h5>
+                        <div class="pra">
+                            <p>Created a PCB that amplifies input audio signals from a microphone, AUX cable
+                             and Bluetooth input and transmits them to wired headphones, while using a small
+                             screen as the user interface</p>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="dox"> 
+                    <div class="card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAs9JREFUWEftlkuoTlEUx3/XO8oEA2UgjzCiTAwVA8ljRgaKQh4pE5GYedykDIQ8ymuCkbxSxNREHkleE1IGyEDkzfnX2lr33L3P2ef6+L7B3aPznbPX2r9vr//+r91Fh42uDuOhH6iuIq3eoTXADOAhcBl4WQdQ/t5qoFvAbFtkAXClnUADgI/AMIMYCXxoJ5BKddcAngJTmsJofitLtg44ZBCngBXtBjoNLDeItcCRfw00CBgCfEospDJNtm/TgQf2PBz4CnzPAcwt2RjgIvAYWBlJPBp4Y+8/AyOAn/b7pOlpkZuTZMsBmglcKkow1rIsBc6XMi40YL2+Ccyx79LRCXt+DWjenaqdqgNaZUId7JLsBbaUku4qyrLN3u0Edtiz5m52c78B64HjKagUkPRyEJDzhvEFWA2ciSSrMkQJ/Rgw1MUdLcq3IaarGFDQyyyX4EXhMYuB+xGYHEOUyNVKxrn420AvXZWBZG5XnV4UfwNYArxPbLMWu2ffngBTE/NGAeecvjRNuprv4nsYo3SiUzTBEv4qtnmP6SGcmNhaTQxRu7m7pMHn9id+KLnfIQE9AiY5oO6iztvdEY4BNTFEAekAbHWJkkCaoyN+DZCvhHEdWAa8S5QiZYjl6SrZWWCu+/AWmOetICZq+Y18R3BhvAJ0nSiLusoQPZByXSiJWn4kX5KO/ozUsVeLkFeE3qSA2LFPGaJfQzmUSznDkHXI49RSeow6Y5RgDwADXdQ+Z3YpQwzT9wObXKyEuxE4nCh/1vVDfqQ+Jn/SUC9Tf9KouyH61qFeJ9+R/yRH3Q6FwKAr3ZXDPSfHEBUv75kY00uMKhdIsdKAWkq4fuQaojq/elgvvfwtUDm+iSFWVamRqKsSNTHE/wL0zLm6vyFmL97KkuUaYmO4JqL2yXMMsTGMAvoKNN48ZZr1oeQNsClVX4GarpM9vx+obqs6bod+AxbwkCWTIXehAAAAAElFTkSuQmCC"/>
+                        <h5>NFC-Enabled Solenoid And Led Control Project</h5>
+                        <div class="pra">
+                            <p>Developed a compact PCB that controls a solenoid and an LED, both triggered for 5 seconds via NFC tapping.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAsNJREFUWEfdmEnIjVEYx38fMhQlY8JGYUNIhhSRwsqKjYVCFqaEDyvzxlzGKEMWSrFRCgsZNkIZyhBKCYkoGUJJzl/n1XuP9z3D29e9l2d1u/f/nOd/nvncFppMWpqMD/8NoQHAGWBciYdvALOAl6kRqOqhVmBHwNhqYGe9CG0ENgSMbTK/C5ckVT3UEEJDgCvAQ0Ahugt0A5YDq4Dugat/ALYB+4AvwCijvwsYCkwBnhTp+zykxBybUzoFTAV6J8UA3gCXDIE5Ob3rwIQUQvOBo4mGU+GycdxVKvKQQvEU6JVqIRH/Dhhkwv8pr1dE6ACwOPHwqnDZWuojNMImb4yB78BhYA/wzCroxiuBhUDHmEOAkcC9DOt6aC+wLOKgF8B04FEJdjhw0RDuF3HWEXuB31CX0Dpgc+CQH7b67gRwk0x5X40gtBbYXuahdtblazzlvT/Si7Jx0in3PL+3dvzsBn6WEcq+72wHY8+CGw4DHkTcXJDJwOUCrCpsIPAtpuwzjJK2KDHb528UINbDePN9Aeaz7fp//eTr1F8BecqVrnYUxDhJ2Jo+Y5WSCYnIK0A3dGU0cDuGDTDeVKPGhCvRIVM4VhgPaJfpU2L0ELAoktAJ06PmlmCV1FttHytN6vWmFWiP8YnKfkxEA50IXIsgLptbMpybQxqoGnoheQ5MK1shbPe9APQNHWRmZk0bcQmljA6VrMKnHSfbnbXraFeaB3SIICOId3QIUM/hehBYkife6PVjMKDN8o+U9aF6LGgLgGNuWH2N8aatpkzntOk/M4FOkbmRwdRgz5lxMzund8tZj4MeEqC/eQieNwu+uqrirOmupFVbELEuAWIictZg9EJ5bJd8ff4IaHi/LtL/p55BPgc05F3mIySX683lk5rFKzbvqoYstKJqMM8wfzjcjyVSNjpS9dscX9VDbU6kaT30C3X8eyUDC07GAAAAAElFTkSuQmCC"/>
+                        <h5>Hybrid Smart Watch Project</h5>
+                        <div class="pra">
+                            <p>Designed a Hybrid Smart Watch PCB that is programmable via NFC from a smartphone
+                             and wirelessly charged using a QI Charger.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAASNJREFUWEftmE1qAkEQRt+YC0jAlQs9iuQ+EdwJij8IyUYkm1xHEy+iG7MLuYHaBa2EwZmqZAYcpRpm1VXfvP6qi2ImoWIrqRgPNwsk4EPgGWj80dWvkPMOvFjyrA4tgJ5FMCdmBow0DSvQN/CoiSn74lRT07AAScxeEzLuq++7FNAB5JG1BNbAwfjCvDA51EPUTuuf89JAH0AbaMUIqbnUvkygSdAbR/0tsAmHfjoRVR5IQH+XbAV8luSQuFzL0M8s2aU7cPVLnYa6OpB3mXdZvJTeZZbp4rPMMlx9lmW55F3mXWZxwLusiEv322Xiyg9QL2IPUNqHonC8Av2CQNOQL2Mjd6nTN2ZL3ADo/uNnwy64+wbMNRjZtwJZtEqJcSDNxiPux34lXj5WawAAAABJRU5ErkJggg=="/>
+                        <h5>BLE Technology Porject</h5>
+                        <div class="pra">
+                            <p>Created a PCB that amplifies input audio signals from a microphone, AUX cable
+                             and Bluetooth input and transmits them to wired headphones, while using a small
+                             screen as the user interface</p>
+                        </div>
+                    </div> 
+                </div>                
+                    
+            </div>
+
+        </section>-->
+
+
+
+
+        <!--Contact Me-->
+        <!--<div class="contact-me">
+            <p>You can find me at:</p>
+            <div class="social">
+                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAepJREFUWEft1z3ITnEYx/HPg0HKYxAmg8Xg8TIYLBYWmUhiIRNZlAFFkkUSgwwGGRhJeZlMmMSg5G3F6KUMFEW4L/2PTuc55z73Oc5dTzr/6b7/b7/vua7r/K7OhBk2JmYYjx6oLiN9hP6LCC3HfizERTyue6qG60uxCbNxF2/z54s1tBb3MJnbdAbH8LOhcHH7LJzGkdzCJ2zE02yuCPQI60qE72MnPrSEWoRr2FBy/kF+vgj0HXMqRN9hGx42hFqPG1hSce4r5lVF6FeN2A8cxbkRoQ6lNFU95DSOYoTqgLIL7mAXPleAzU8p2jwi+F+OtkCh8xpb8Lwgugq3sWxEmNjWCVBc9A0HcDmJ78UFzG0A0ylQpns1/djTEKSzGmqpW3mss5R1BdYY6GNy6sUtCd6nVhHtqGw0Boo3KSz+eoXbDuMMl9+BcOSpLoFWp9fzME4NcfRMM1z/OM4i/O1Fl0BxWfhLNqIJ30R07rLxZgCwHU9yi2MFCp0FuDLo1FsLRLewG18K82MHyvT24Xz6cxCXKqLWKdCzQYrWDKncKNaok1dD9nQKVKyhNm9/D1QXtVYRejkwvxUlN48zZaG5clqXTRPhHSdLDCycOozxX0ZZhGLuRPK0P3f3X651Ie4j1EeoLgJ1678B0ZFgJW3TFU0AAAAASUVORK5CYII="/></a>
+                <p>+254707377751</p>
+                <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAl9JREFUWEft10uoT1EUx/GPR2KgMJGJ5DGQx0AyUcojJSRGHjGQiYgZoUQkQ4+UEiKvEinFwFjymhgpUchARAaSt7Pq3Nz+7XPO/rvn1h1Yo3+dtX7r+19777XXHmSA2aABxuM/UNOK5FRoKMbhdZNYG9+bgGbhOsZjLw62kbROow5oBa5geC+BzTjZn1BVQLvLanR+/411uNxfUCmgVbhWk/AXluF2f0ClgGKv7G9I9hULcbdtqBTQLhzKSPQJ8/AkwzfbJQW0CacyFd5gIr5l+je6pYCW4FZj5F+HqXjahX+tawooes7LzAQ3sDLTN8ut6th/wOgGhWiYq/E9K1OmUxXQJayp0biIDUX3jhbQqlUB1fWiM4iNH02ydasCGoa3GJXIOAcPWycpBevussPYmUgcd1ncaf1idUAT8ByDOzLHJp6ZedQnlRrZ8E3jxxFsT6g9wFz8qMg0pGiY57EW97Ec73KomoBGFrf7M4xNiJ0rN3cnVFT0QscpfYVFpVbXjbEzIBpf9JyU3SuWZH3HspzGxoTzRywuJoVHdURNFeqJ3VY0yqMVQrGnTuB4ubzhW2Wfy85+p8ohFyjiYwKISaCv9rNczqspoW6AIn5Pi3N1HJZjnVDdAkV8nJzY0PEa6YvFtTOluIJe9Bb5F6CIn46zmN0Hovfla+ZLG0ChEX9ma/FjX1H6MV2CxUC3IDUC/2uFeuePXrWjaHxbMkaWnrhY9uTLpQ2gniTRnWPwX4r5xctlRkXV4hFxoI1j3+WqGFFu2smYVkAE8GPcrBNqs0LdAif9/wM1lXHAVegPVFZVJZaygaQAAAAASUVORK5CYII="/></a>
+                <p>waitheraangela4@gmail.com</p>
+        
+
+            </div>
+        </div>-->
+
+
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--Custom js file link--->
+        <script src="web.js"></script>
+
+    </body>
+</html>
