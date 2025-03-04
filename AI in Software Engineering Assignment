@@ -1,0 +1,59 @@
+
+2. What is the main difference between TensorFlow and PyTorch in terms of computation graphs?
+TensorFlow: Uses static computation graphs (also known as declarative graphs). The graph is defined first, and then data flows through it. This approach enables better optimization and deployment but can be less flexible during development.
+PyTorch: Uses dynamic computation graphs (also known as define-by-run). The graph is built on-the-fly during execution, making it more flexible and easier for debugging and research.
+
+3. What is Keras, and on which frameworks can it run?
+Keras is an open-source, high-level neural networks API written in Python. It allows for easy and fast prototyping of deep learning models by providing simple APIs.
+Frameworks Keras Can Run On:
+TensorFlow (default backend) 
+PlaidML: For running on OpenCL devices.
+
+4. What are the key features of Scikit-learn? 
+Key Features:
+Supervised Learning: Support for classification and regression (e.g., SVM, decision trees, random forests).
+Unsupervised Learning: Clustering algorithms like K-Means, DBSCAN, and PCA.
+Model Evaluation: Cross-validation, metrics like accuracy, precision, recall, and F1 score.
+Feature Engineering: Tools for feature selection, extraction, and scaling.
+Pipelines: For automating and simplifying workflows.
+Ease of Use: Consistent API and comprehensive documentation.
+
+5. What is the purpose of Jupyter Notebooks, and what are its key features?
+Purpose:
+Interactive Computing: Ideal for data analysis, machine learning, and teaching.
+Documentation and Sharing: Combines code, output, and explanations in one document.
+Key Features:
+Support for Multiple Languages: Python, R, Julia, and more via Jupyter kernels.
+Markdown and LaTeX: For rich text formatting and equations.
+Data Visualization: Supports libraries like Matplotlib, Seaborn, Plotly.
+Interactive Widgets: For dynamic input and output.
+Integrated Development: Supports debugging, version control, and extensions.
+
+6. In the TensorFlow example provided, what is the purpose of the Dropout layer in the neural network?
+In the provided TensorFlow example, the line: layers.Dropout(0.2)
+This introduces a Dropout layer with a dropout rate of 0.2 (20%).The primary purpose of the Dropout layer is to prevent overfitting by temporarily deactivating (or "dropping out") 
+a random subset of neurons during each training step.
+
+7. What is the role of the optimizer in the PyTorch example, and which optimizer is used?
+Role of the Optimizer in the PyTorch Example:
+The optimizer is responsible for updating the weights of the neural network to minimize the loss function during training. It does this by computing the gradients of the loss function with respect to the model parameters and then adjusting these parameters using a specific optimization algorithm.
+Which Optimizer is Used?
+In the given example, the optimizer used is Adam, which is imported from Keras (not PyTorch as mentioned in your question). Here’s the import statement: from keras.optimizers import Adam
+
+8. In the Keras example, what is the purpose of the Conv2D layer?
+None of the Keras examples have a Conv2D layer
+
+9. What type of model is used in the Scikit-learn example, and what dataset is it applied to?
+Type of Model Used:
+The model used in the Scikit-learn example is a Linear Regression model, which is part of the sklearn.linear_model module. This type of model is used for predicting continuous numerical values by finding a linear relationship between the input features (independent variables) and the target variable (dependent variable).
+Dataset Applied To:
+Features (X): A small dataset representing houses, with each entry containing:
+Size (sq ft)
+Number of bedrooms
+Example: [1400, 3] means a house with 1400 sq ft and 3 bedrooms.
+Target (y): House prices in USD.
+
+10. What is the output of the Jupyter Notebook example, and which library is used to generate the visualization?
+
+matplotlib
+
