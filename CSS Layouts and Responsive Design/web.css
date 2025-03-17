@@ -1,0 +1,131 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #c2185b;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Layout using CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Box Styling */
+.box {
+    background-color: #f8bbd0;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+
+/* Myths vs. Facts Section */
+.myths-facts {
+    background-color: #ffeb3b;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 200px; /* Reduced height */
+}
+
+/* Individual Myth/Facts Styling */
+.myth-fact {
+    background: #fff3cd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+/* Menstrual Products Section */
+.products {
+    background-color: #e1bee7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    padding: 20px;
+    width: 200%;
+    max-width: 2000px;
+    margin: 0 auto;
+    min-height: 200px; /* Reduced height */
+}
+
+/* Individual Product Box */
+.product {
+    background: #f3e5f5;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 60%; /* Display products side by side */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image Styling */
+.product img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .products {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 90%;
+    }
+}
