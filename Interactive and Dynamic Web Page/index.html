@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga with [Your Name]</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="animated-text">Find Your Inner Peace with Yoga</h1>
+        <p class="subheading">Join our relaxing yoga sessions to improve your mind, body, and soul.</p>
+    </header>
+
+    <!-- Call to Action Button -->
+    <button id="hoverButton">Book a Free Trial Class</button>
+
+    <br><br>
+
+    <!-- Yoga Class Booking Form -->
+    <h2>Book Your Yoga Class</h2>
+    <form id="yogaForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" required>
+
+        <label for="classType">Select Class Type:</label>
+        <select id="classType">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+
+        <button type="submit">Reserve Your Spot</button>
+    </form>
+    <p id="formMessage"></p>
+
+    <br>
+
+    <!-- Modal for Special Offers -->
+    <button id="showModal">Special Yoga Offers</button>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal">&times;</span>
+            <p>Join now and get 10% off your first month!</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Animated Yoga Pose Icon -->
+    <button id="animateBoxBtn">Breathing Exercise</button>
+    <div id="animatedBox"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

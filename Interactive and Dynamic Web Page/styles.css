@@ -1,0 +1,101 @@
+/* Calming Yoga Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #F4E1D2; /* Soft earthy tone */
+    color: #333;
+}
+
+/* Header Text Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-text {
+    font-size: 28px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Smooth transition on buttons */
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    background-color: #8D6E63; /* Warm brown */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #6D4C41;
+    transform: scale(1.1);
+}
+
+/* Yoga Class Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: auto;
+}
+
+input, select {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Yoga Pose Animation */
+@keyframes breathe {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#animatedBox {
+    width: 100px;
+    height: 100px;
+    background-color: #FFB74D; /* Warm orange */
+    border-radius: 50%;
+    margin: 20px auto;
+    display: none;
+}
+
+.breathe-animation {
+    animation: breathe 2s ease-in-out infinite;
+}
